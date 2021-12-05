@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { RiTimerLine } from "react-icons/ri";
 import { nanoid } from 'nanoid';
 import NotesList from '../SubUtils/NoteList';
 import Search from '../SubUtils/Search';
@@ -68,6 +69,9 @@ const App = () => {
 	return (
 		<div className={`${darkMode && 'dark-mode'}`}>
 			<div className='container'>
+				<a className='clock' target="_blank" href={`/relogio`} >
+					<RiTimerLine className="clock-icon" />
+				</a>
 				<Header handleToggleDarkMode={setDarkMode} />
 				<Search handleSearchNote={setSearchText} />
 				<NotesList

@@ -175,6 +175,14 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
+
+.clock-icon {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .delete-icon {
   margin-right: 5px;
   color: var(--white);
@@ -185,6 +193,10 @@ body {
 .subtodo-icon {
   color: var(--white);
 }
+.clock-icon {
+  color: var(--white);
+}
+
 /* botao voltar */
 .back-button-todo {
   padding-top: 45px;

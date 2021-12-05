@@ -44,7 +44,7 @@ function Clock({ setPomodOrcCycleType }: ClockProps): JSX.Element {
     setTimeRunning(!timeRunning); //Usamos o ! aqui como uma maneira de dizer ao compilador "esta expressão não pode ser null ou undefined aqui, então não reclame sobre a possibilidade de ser null ou undefined.".
   }
 
-  React.useEffect(() => { //COntagem dos segundos, sendo passado de 1 por 1.
+  React.useEffect(() => { //Contagem dos segundos, sendo passado de 1 por 1.
     if (timeRunning) {
       const interval = setInterval(() => { 
         setRemainingTime((previous) => {

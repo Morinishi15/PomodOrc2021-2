@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import TodoForm from './TodoForm'
-import { RiCloseCircleLine } from 'react-icons/ri'
+import { RiCloseCircleLine, RiTimerLine } from "react-icons/ri";
 import { TiEdit, TiPlus } from 'react-icons/ti'
 
 function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
@@ -42,22 +42,26 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   if (todos) {
     return todos.map((todo, index) => (
       <div
+        // className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
         className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
-        key={index}
+        key={index} style={{cursor: 'pointer'}}
       >
-        <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-          {todo.text}
+        <a target="_blank" href={`/relogio/${todo.nome}`} >
+          <RiTimerLine className="clock-icon" />
+        </a>
+        <div key={todo._id} onClick={() => completeTodo(todo._id, todo.isComplete)}>
+          {todo.nome}
         </div>
         <div className="icons">
           <RiCloseCircleLine
-            onClick={() => removeTodo(todo.id)}
+            onClick={() => removeTodo(todo._id)}
             className="delete-icon"
           />
           <TiEdit
-            onClick={() => setEdit({ id: todo.id, value: todo.text })}
+            onClick={() => setEdit({ id: todo._id, value: todo.nome })}
             className="edit-icon"
           />
-          <a href="/subtasks" class="GFG">
+          <a href="/sub" className="GFG">
             <TiPlus
               className="subtodo-icon"
             />

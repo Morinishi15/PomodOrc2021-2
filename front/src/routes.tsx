@@ -14,6 +14,7 @@ export const Router = () => {
             <Routes>
                 
                 <Route path="/relogio/:nome" element={<Title/>} />
+                <Route path="/relogio" element={<Title/>} />
                 <Route path="/" element={<Home/>} />
                 <Route path="/about" element={<About/>} />
 

@@ -46,7 +46,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
         className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
         key={index} style={{cursor: 'pointer'}}
       >
-        <a target="_blank" href={`/relogio/${todo.nome}`} >
+        <a href={`/relogio/${todo.nome}`} >
           <RiTimerLine className="clock-icon" />
         </a>
         <div key={todo._id} onClick={() => completeTodo(todo._id, todo.isComplete)}>

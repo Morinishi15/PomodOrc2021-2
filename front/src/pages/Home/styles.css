@@ -140,3 +140,10 @@ body {
   color: white;
   text-align: center;
 }
+
+.task {
+  z-index: 1;
+  text-transform: capitalize;
+  color:#FF1250;
+  margin-bottom: 10px;
+}

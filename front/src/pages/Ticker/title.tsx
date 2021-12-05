@@ -16,13 +16,13 @@ function Title(): JSX.Element {
           <text id="Pomod">Pomod</text><text id="Orc">Orc</text>
         </a>
       </S.MainTitle>
-      <h1>{nome}</h1>
+      <h1 className="task">{nome}</h1>
       <Tabs activeItem={pomodoroCycleType} />
       <Clock 
         setPomodOrcCycleType={setPomodoroCycleType}
       />
       <S.GoBack>
-        <a href="/" className="init">
+        <a href="/todo" className="init">
           <text>Voltar</text>
         </a>
       </S.GoBack>

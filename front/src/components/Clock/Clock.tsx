@@ -51,32 +51,9 @@ function Clock({ setPomodOrcCycleType }: ClockProps): JSX.Element {
           if (previous === 0) return previous;
           return previous - 1;
         });
-      }, 2);
+      }, 1000);
       //Agendamos um novo intervalo para ser executado a cada segundo dentro do gancho useEffect. Isso será agendado assim que o componente React for montado pela primeira vez. Para limpar o intervalo corretamente, retornamos clearInterval do gancho useEffect, passando o intervalo.
       return () => clearInterval(interval);
-    }
-  }, [timeRunning]);
-
-  React.useEffect(() => { //COntagem dos segundos, sendo passado de 1 por 1.
-    if (timeRunning) {
-      /*
-      if (remainingTime==1500) {
-
-        return () => alert("Intervalo");
-
-      } else if (remainingTime==300) {
-
-        return () => alert("Fim do Intervalo Curto");
-
-      } else if (remainingTime==900) {
-
-        return () => alert("Fim do Intervalo Longo");
-
-      }
-      
-      return () => alert("Pomodorc pausado ou alterado");
-      */
-      //Agendamos um novo intervalo para ser executado a cada segundo dentro do gancho useEffect. Isso será agendado assim que o componente React for montado pela primeira vez. Para limpar o intervalo corretamente, retornamos clearInterval do gancho useEffect, passando o intervalo.
     }
   }, [timeRunning]);
 

@@ -12,7 +12,7 @@ function Home() {
         <div className="buttons">
           <a href="/todo" id="init">Iniciar</a>
           <div className="vl"></div>
-          <a href="/sobre" id="about-page">Sobre</a>
+          <a href="/about" id="about-page">Sobre</a>
         </div>
       </div>
 

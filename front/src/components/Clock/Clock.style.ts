@@ -39,7 +39,7 @@ export const Time = styled.div<{
   fontSizeInPixels: number,
 }>`
   color: ${({ theme }) => theme.colors.lightGray};
-  font-size: ${({ fontSizeInPixels }) => fontSizeInPixels}px;
+  font-size: ${({ fontSizeInPixels }) => fontSizeInPixels-18}px;
   font-weight: ${({ theme }) => theme.fonts.weight.bolder};
 `;
 export const Button = styled.button<{

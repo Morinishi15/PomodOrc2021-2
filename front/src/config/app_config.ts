@@ -1,1 +1,1 @@
-export const BASE_API_URL = "https://api-pomodorc.herokuapp.com"
+export const BASE_API_URL = "http://localhost:3333"
